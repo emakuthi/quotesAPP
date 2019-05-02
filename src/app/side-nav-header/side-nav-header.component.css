@@ -5,16 +5,17 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:burlywood;
+    background-color:whitesmoke;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 0px;
     margin-top: 20px;
+    box-shadow:5px 10px 9px darkgrey;
   }
   .sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: black;
     display: block;
     border: none;
     background: none;
@@ -22,4 +23,12 @@
     text-align: left;
     cursor: pointer;
     outline: none;
+  }
+  .icon{
+      background-color: aqua;
+      height:150px;
+      padding: 20px 20px ;
+  }
+  .icon-container{
+    
   }
