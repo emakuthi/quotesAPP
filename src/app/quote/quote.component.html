@@ -2,16 +2,22 @@
 <hr>
 <div class="container">
     <div class="row" *ngFor='let quote of quotes;let i = index'>
-      <div class="row">
-        <li appHighlighQuote >{{quote.quoteName}} quote posted on {{quote.dateOfSubmit|date}}</li>
-        <span (click)='toogleDetails(i)'>quote Details</span>
-      </div>
+     
+        <div class="col-md-6">
+          <p appHighlighQuote >{{quote.quoteName}} quote posted on {{quote.dateOfSubmit|date}}</p>
+          <button (click)='toogleDetails(i)'>Details</button>
+        </div>
+      
       <div class="row" *ngIf="quote.showQuoteBody">
         <app-quote-details  [quote]='quote'(isComplete)= 'deleteQuote($event,i)'></app-quote-details>
       </div>
     </div>
 </div>
-
-  <p *ngIf='quotes.length > 5'>You have too many goals</p>
+<hr>
+<div class="container">
+  <div class="row">
+    <app-quote-form></app-quote-form>
+  </div>
+</div>
 
   
