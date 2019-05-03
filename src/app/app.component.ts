@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Quote} from './quote'
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes:string[];
-
-
-  constructor(){
-
-    this.quotes=["akili ni nywele kila mtu anazake","bahati ya mwenzio usilalie mlango wazi"]
-  }
+  quotes = [
+    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
+    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
+    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() )
+  ]
+  
 }
