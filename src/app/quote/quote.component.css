@@ -1,0 +1,18 @@
+.myHeader{
+   text-align: center;
+}
+.container-main{
+    margin-left:200px;
+    margin-right:200px;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px darkgray;
+
+}
+.container-main-quotes{
+    width: 100%;
+    box-shadow: 5px 5px 5px 5px darkgray;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 500px;
+}

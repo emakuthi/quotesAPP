@@ -1,9 +1,16 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
             <div class="form-group">
+                    <label for="">submitter</label>
+                    <input type="text"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
+                    <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
+                        <p> submitter is Required</p>       
+            </div>
+            </div>
+            <div class="form-group">
 
-                <label for="quoteName">Name</label>
+                <label for="quoteName">Quote Category</label>
                 <input type="text"  class="form-control" id="quoteName" [(ngModel)]="newQuote.quoteName" name="quoteName" #quoteName="ngModel" required>
                 <div [hidden]="quoteName.valid || quoteName.pristine" class="alert alert-danger">
                         <p> Name is Required</p>     
@@ -11,7 +18,7 @@
             </div>
             <div class="form-group">
 
-                <label for="quoteBody">Description</label>
+                <label for="quoteBody">Quote Details</label>
                 <textarea class="form-control" id="quoteBody" rows="4" [(ngModel)]="newQuote.quoteBody" name="quoteBody" #quoteBody="ngModel" required></textarea>
                 <div [hidden]="quoteBody.valid || quoteBody.pristine || quoteBody.untouched" class="alert alert-danger">
                  <p> Details is Required</p>       

@@ -9,6 +9,7 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = []
+  
   toogleDetails(index){
     this.quotes[index].showQuoteBody = !this.quotes[index].showQuoteBody;
   }
