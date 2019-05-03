@@ -1,4 +1,6 @@
 
+
+
 <div class="container-main">
 
 <div class="myHeader">
@@ -17,11 +19,12 @@
                   <div  *ngFor='let quote of quotes;let i = index'>
                     
                       <div >
+                        <hr>
                         <p>Submitted by {{quote.submittedBy}}</p>
                         <p appHighlighQuote >{{quote.quoteName}} quote posted on {{quote.dateOfSubmit|date}}</p>
                         <button (click)='toogleDetails(i)'>Details</button>
                       </div>
-                    
+                    <hr>
                     <div *ngIf="quote.showQuoteBody">
                       <app-quote-details  [quote]='quote'(isComplete)= 'deleteQuote($event,i)'></app-quote-details>
                     </div>
@@ -34,7 +37,6 @@
   </div>
 </div>
 <hr>
-
 </div>
 
 
