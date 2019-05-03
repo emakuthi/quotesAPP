@@ -2,6 +2,8 @@
 <p>This quote was posted {{quote.dateOfSubmit|timeAgo}}</p>
 <div class="myButtons">
 <button  (click) = 'quoteDelete(true)'> delete </button>
-<button  (click) = 'quoteDelete(true)'> likes </button>
-<button  (click) = 'quoteDelete(true)'> dislikes </button>
 </div>
+
+<app-like></app-like>
+
+
