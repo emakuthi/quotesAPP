@@ -13,7 +13,7 @@ export class HighlighQuoteDirective {
     this.textDeco("blue")
   }
   @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("none")
+    this.textDeco("black")
   }
    private textDeco(action:string){
     this.elem.nativeElement.style.color=action;
