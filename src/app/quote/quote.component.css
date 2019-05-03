@@ -8,14 +8,17 @@
     padding: 20px;
     box-shadow: 5px 5px 5px 5px darkgray;
     background-color: aqua;
+   
     
 
 }
 .container-main-quotes{
     width: 100%;
-    box-shadow: 5px 5px 5px 5px darkgray;
     padding: 20px;
     overflow-y: scroll;
     height: 500px;
+    border-style: solid;
+    border-radius: 10px;
+
 }
 
