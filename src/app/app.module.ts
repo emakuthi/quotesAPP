@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { HighlighQuoteDirective } from './highligh-quote.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HighlighQuoteDirective } from './highligh-quote.directive';
     QuoteComponent,
     QuoteDetailsComponent,
     HighlighQuoteDirective,
+    DateCountPipe,
     
   ],
   imports: [
