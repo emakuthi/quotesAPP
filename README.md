@@ -1,27 +1,71 @@
-# QuotesAPP
+# Quotes APP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+#### By **Elvis Makuthi, May 3, 2019**
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A simple dice game. Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
 
-## Code scaffolding
+* If the player rolls a 1, they score nothing and it becomes the next player's turn.
+* If the player rolls any other number, it is added to their turn total and the player's turn continues.
+* If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The first player to score 100 or more points wins.
 
-## Build
+## Specs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+ | Behavior                                       |  Input | Output    |
+ | ---------------------------------------------- | ------ | --------- |
+ | user enters a quote on the form  | enter all the feilds on the form      | the quote will be displayed after post button is clicked     |
+ | number of likes and dislikes | click like or dislike button      | number of likes increases as the user cliks    |
 
-## Running unit tests
+## Setup/Installation Requirements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Open CMD/Terminal
+* $ git clone https://github.com/emakuthi/quotesApp
+* Open index.html file in a browser such as Google Chrome
 
-## Running end-to-end tests
+## Known Bugs
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+there are currently no known bugs experienced on the website but feedback on bugs encountered during viewing of the page will be highly appreciated and will go a long way into making the website better for the users. The only reason that the website may fail to load is if the Internet connection is slow or disconnected which will require you to troubleshoot your Internet connection
 
-## Further help
+## Technologies Used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**Main Languages used:**
+
+* angular7
+* CSS
+* JavaScript
+* jQuery
+
+**Other Technologies:**
+
+* Bootstrap
+
+## live link:
+
+$ live link https://emakuthi.github.io/quotesApp/
+
+# clone into repository
+
+$ git clone https://github.com/emakuthi/quotesApp
+### Open using your favorite editor and view the code or just open the index.html on the browser
+
+## Feedback
+
+Incase of any issues or feedback please add using any of below links.
+
+* [Issues](https://github.com/emakuthi/quotesApp/issues). To submit any issues.
+
+* [email](emakuthi@gmail.com) for any other feedback.
+
+## Support and contact details
+
+ Contact me on +254722827172 or on my github account <https://github.com/emakuthi>
+
+
+## License
+
+This project is licensed under the MIT License
+
+**_Elvis Makuthi_** Copyright (c) 2017
