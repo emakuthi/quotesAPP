@@ -9,13 +9,16 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ), 
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() ),
-    new Quote('akili ni nywele kila mtu anazake','anonymous','Elvis', 1,0, new Date() )
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
+    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() )
   ]
+  toogleDetails(index){
+    this.quotes[index].showQuoteBody = !this.quotes[index].showQuoteBody;
+  }
 
   constructor() { }
 
