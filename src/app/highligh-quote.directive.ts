@@ -1,10 +1,23 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighQuote]'
 })
 export class HighlighQuoteDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) {
+   
+   }
+
+  @HostListener("click") onClicks(){
+    this.textDeco("blue")
+  }
+  @HostListener("dblclick") onDoubleClicks(){
+    this.textDeco("none")
+  }
+   private textDeco(action:string){
+    this.elem.nativeElement.style.color=action;
+
+  }
 
 }
