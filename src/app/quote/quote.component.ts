@@ -8,14 +8,7 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() ),
-    new Quote('wisdom','akili ni nywele kila mtu anazake','anonymous','Elvis', 1, 0, new Date() )
-  ]
+  quotes = []
   toogleDetails(index){
     this.quotes[index].showQuoteBody = !this.quotes[index].showQuoteBody;
   }
@@ -24,6 +17,10 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index,1);
         }
   }
+  addNewQuote(quote){
+    this.quotes.push(quote)
+
+}
 
   constructor() { }
 
