@@ -1,5 +1,5 @@
 
-<router-outlet></router-outlet>
-<app-header></app-header>
-<quotes-input></quotes-input>
-<app-side-nav-header></app-side-nav-header>
+<h1>my quotes</h1>
+<ul>
+  <li *ngFor='let quote of quotes'>{{quote}}</li>
+</ul>
