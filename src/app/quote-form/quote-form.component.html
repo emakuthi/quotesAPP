@@ -6,13 +6,7 @@
                     <input type="text" placeholder="Enter the your Full Name"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
                     <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
                         <p> submitter is Required</p>       
-            </div>
-            
-            <form [formGroup]="countryForm">
-                <select formControlName="countryControl">
-                  <option [value]="country" *ngFor="let country of countries">             {{country}}</option>
-                </select>
-
+                    </div>
             </div>
             <div class="form-group">
 
