@@ -3,15 +3,21 @@
         <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
             <div class="form-group">
                     <label for="">submitter</label>
-                    <input type="text"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
+                    <input type="text" placeholder="Enter the your Full Name"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
                     <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
                         <p> submitter is Required</p>       
             </div>
+            
+            <form [formGroup]="countryForm">
+                <select formControlName="countryControl">
+                  <option [value]="country" *ngFor="let country of countries">             {{country}}</option>
+                </select>
+
             </div>
             <div class="form-group">
 
                 <label for="quoteName">Quote Category</label>
-                <input type="text"  class="form-control" id="quoteName" [(ngModel)]="newQuote.quoteName" name="quoteName" #quoteName="ngModel" required>
+                <input type="text" placeholder="Enter the category " class="form-control" id="quoteName" [(ngModel)]="newQuote.quoteName" name="quoteName" #quoteName="ngModel" required>
                 <div [hidden]="quoteName.valid || quoteName.pristine" class="alert alert-danger">
                         <p> Name is Required</p>     
                 </div>
@@ -19,14 +25,14 @@
             <div class="form-group">
 
                 <label for="quoteBody">Quote Details</label>
-                <textarea class="form-control" id="quoteBody" rows="4" [(ngModel)]="newQuote.quoteBody" name="quoteBody" #quoteBody="ngModel" required></textarea>
+                <textarea class="form-control" placeholder="Enter your favourite quote" id="quoteBody" rows="4" [(ngModel)]="newQuote.quoteBody" name="quoteBody" #quoteBody="ngModel" required></textarea>
                 <div [hidden]="quoteBody.valid || quoteBody.pristine || quoteBody.untouched" class="alert alert-danger">
                  <p> Details is Required</p>       
                 </div> 
             </div>
             <div class="form-group">
                 <label for="author">author</label>
-                <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                <input type="text" placeholder="Enter the author"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
                 <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                         <p> Author is Required</p>       
                 </div>
