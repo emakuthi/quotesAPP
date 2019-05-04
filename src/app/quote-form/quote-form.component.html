@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <form (ngSubmit)='onsubmitQuote()' #quoteForm='ngForm'>
             <div class="form-group">
                     <label for="">submitter</label>
                     <input type="text" placeholder="Enter the your Full Name"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
@@ -31,7 +31,7 @@
                         <p> Author is Required</p>       
                 </div>
             </div>
-            <button type="submit" class="btn btn-success">post</button>
+            <button type="submit"[disabled]="!quoteForm.form.valid" class="btn btn-success">post</button>
         </form>
     </div>
 </div>
